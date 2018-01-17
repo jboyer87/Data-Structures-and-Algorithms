@@ -2,27 +2,30 @@
 #include <vector>
 #include <iterator>
 
-
+template <typename T>
 class BinarySearch
 {
 public:
 	BinarySearch();
 	~BinarySearch();
-	int binarySearch(int needle, std::vector<int> haystack);
+	int binarySearch(T needle, std::vector<T> haystack);
 private:
 };
 
-BinarySearch::BinarySearch()
+template <typename T>
+BinarySearch<T>::BinarySearch()
 {
 
 }
 
-BinarySearch::~BinarySearch()
+template <typename T>
+BinarySearch<T>::~BinarySearch()
 {
 
 }
 
-int BinarySearch::binarySearch(int needle, std::vector<int> haystack)
+template <typename T>
+int BinarySearch<T>::binarySearch(T needle, std::vector<T> haystack)
 {
 	int start = 0;
 	int end = haystack.size() - 1;
@@ -46,5 +49,6 @@ int BinarySearch::binarySearch(int needle, std::vector<int> haystack)
 		}
 	}
 
+	// Return -1 if not found
 	return -1;
 }
