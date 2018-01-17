@@ -31,7 +31,7 @@ std::vector<T> InsertionSort<T>::sort(std::vector<T> listToSort)
 {
 	for (int i = 1; i < listToSort.size(); i++)
 	{
-		int current = listToSort[i];
+		T current = listToSort[i];
 		int previous = i - 1;
 		
 		while (previous >= 0 && listToSort[previous] > current)

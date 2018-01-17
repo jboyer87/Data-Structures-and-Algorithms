@@ -6,7 +6,9 @@
 
 int main()
 {
-	// Test insertion sort with int/double
+	// Insertion Sort
+
+	// Test with int
 	InsertionSort<int> insertionSortInt;
 
 	std::vector<int> testVectorInt;
@@ -20,7 +22,7 @@ int main()
 
 	testVectorInt = insertionSortInt.sort(testVectorInt);
 
-
+	// Test with double
 	InsertionSort<double> insertionSortDouble;
 
 	std::vector<double> testVectorDouble;
@@ -34,31 +36,65 @@ int main()
 
 	testVectorDouble = insertionSortDouble.sort(testVectorDouble);
 
-	BinarySearch binarySearch;
 
-	std::vector<int> testBinarySearch;
+	// Binary Search
 
-	testBinarySearch.push_back(1);
-	testBinarySearch.push_back(3);
-	testBinarySearch.push_back(5);
-	testBinarySearch.push_back(7);
-	testBinarySearch.push_back(9);
-	testBinarySearch.push_back(11);
-	testBinarySearch.push_back(13);
+	// Test with int
+	BinarySearch<int> binarySearchInt;
 
-	int needle = 1;
+	std::vector<int> testBinarySearchInt;
+
+	testBinarySearchInt.push_back(1);
+	testBinarySearchInt.push_back(3);
+	testBinarySearchInt.push_back(5);
+	testBinarySearchInt.push_back(7);
+	testBinarySearchInt.push_back(9);
+	testBinarySearchInt.push_back(11);
+	testBinarySearchInt.push_back(13);
+
+	int needleInt = 9;
 	
-	int searchResult = 0;
+	int searchResultInt = 0;
 	
-	searchResult = binarySearch.binarySearch(needle, testBinarySearch);
+	searchResultInt = binarySearchInt.binarySearch(needleInt, testBinarySearchInt);
 
-	if (searchResult == -1)
+	if (searchResultInt == -1)
 	{
-		std::cout << "Didn't find it!" << std::endl;
+		std::cout << "Didn't find it" << std::endl;
 	}
 	else
 	{
-		std::cout << "Found it at index " << searchResult << " (" << testBinarySearch[searchResult] << ")" << std::endl;
+		std::cout << "Found it at index " << searchResultInt << " (" << testBinarySearchInt[searchResultInt] << ")" << std::endl;
+	}
+
+
+	// Test with string
+	BinarySearch<std::string> binarySearchString;
+
+	std::vector<std::string> testBinarySearchString;
+
+	// Have to add a leading 0 to make sure the ordering is as expected
+	testBinarySearchString.push_back("test01");
+	testBinarySearchString.push_back("test03");
+	testBinarySearchString.push_back("test05");
+	testBinarySearchString.push_back("test07");
+	testBinarySearchString.push_back("test09");
+	testBinarySearchString.push_back("test11");
+	testBinarySearchString.push_back("test13");
+
+	std::string needleString = "test09";
+
+	int searchResultString = 0;
+
+	searchResultString = binarySearchString.binarySearch(needleString, testBinarySearchString);
+
+	if (searchResultString == -1)
+	{
+		std::cout << "Didn't find it" << std::endl;
+	}
+	else
+	{
+		std::cout << "Found it at index " << searchResultString << " (" << testBinarySearchString[searchResultString] << ")" << std::endl;
 	}
 
 	return 0;
