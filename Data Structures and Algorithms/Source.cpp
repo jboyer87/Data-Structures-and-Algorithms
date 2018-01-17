@@ -1,4 +1,6 @@
 #include "InsertionSort.h"
+#include "BinarySearch.h"
+#include <iostream>
 #include <vector>
 #include <string>
 
@@ -31,6 +33,33 @@ int main()
 	testVectorDouble.push_back(19.12);
 
 	testVectorDouble = insertionSortDouble.sort(testVectorDouble);
+
+	BinarySearch binarySearch;
+
+	std::vector<int> testBinarySearch;
+
+	testBinarySearch.push_back(1);
+	testBinarySearch.push_back(3);
+	testBinarySearch.push_back(5);
+	testBinarySearch.push_back(7);
+	testBinarySearch.push_back(9);
+	testBinarySearch.push_back(11);
+	testBinarySearch.push_back(13);
+
+	int needle = 1;
+	
+	int searchResult = 0;
+	
+	searchResult = binarySearch.binarySearch(needle, testBinarySearch);
+
+	if (searchResult == -1)
+	{
+		std::cout << "Didn't find it!" << std::endl;
+	}
+	else
+	{
+		std::cout << "Found it at index " << searchResult << " (" << testBinarySearch[searchResult] << ")" << std::endl;
+	}
 
 	return 0;
 }

@@ -16,6 +16,9 @@
     <Filter Include="Header Files\SortingAlgorithms">
       <UniqueIdentifier>{6d8b71ec-30b7-4a3c-bdc5-cab83df191a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\SearchAlgorithms">
+      <UniqueIdentifier>{35eec2bc-2eff-415c-b1a9-c56f0159e747}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -25,6 +28,9 @@
   <ItemGroup>
     <ClInclude Include="InsertionSort.h">
       <Filter>Header Files\SortingAlgorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearch.h">
+      <Filter>Header Files\SearchAlgorithms</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
