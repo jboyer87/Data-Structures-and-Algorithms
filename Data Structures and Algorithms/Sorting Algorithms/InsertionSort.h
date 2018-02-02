@@ -3,31 +3,7 @@
 #include <vector>
 
 template <typename T>
-class InsertionSort
-{
-public:
-	InsertionSort();
-	~InsertionSort();
-	std::vector<T> sort(std::vector<T> listToSort);
-
-private:
-	
-};
-
-template <typename T>
-InsertionSort<T>::InsertionSort()
-{
-
-}
-
-template <typename T>
-InsertionSort<T>::~InsertionSort()
-{
-
-}
-
-template <typename T>
-std::vector<T> InsertionSort<T>::sort(std::vector<T> listToSort)
+std::vector<T> insertionSort(std::vector<T> listToSort)
 {
 	for (int i = 1; i < listToSort.size(); i++)
 	{

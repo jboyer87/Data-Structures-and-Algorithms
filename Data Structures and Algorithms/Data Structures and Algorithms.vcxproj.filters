@@ -13,11 +13,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\SortingAlgorithms">
-      <UniqueIdentifier>{6d8b71ec-30b7-4a3c-bdc5-cab83df191a0}</UniqueIdentifier>
+    <Filter Include="Header Files\Data Structures">
+      <UniqueIdentifier>{1290e651-b3b2-4de8-bc37-39264fcf144d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\SearchAlgorithms">
-      <UniqueIdentifier>{35eec2bc-2eff-415c-b1a9-c56f0159e747}</UniqueIdentifier>
+    <Filter Include="Header Files\Search Algorithms">
+      <UniqueIdentifier>{48af2215-edcd-48a7-9f22-fc06adf30595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Sorting Algorithms">
+      <UniqueIdentifier>{ea96650f-dd20-4699-9892-c4a759838485}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -26,11 +29,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="InsertionSort.h">
-      <Filter>Header Files\SortingAlgorithms</Filter>
+    <ClInclude Include="Search Algorithms\BinarySearch.h">
+      <Filter>Header Files\Search Algorithms</Filter>
     </ClInclude>
-    <ClInclude Include="BinarySearch.h">
-      <Filter>Header Files\SearchAlgorithms</Filter>
+    <ClInclude Include="Sorting Algorithms\InsertionSort.h">
+      <Filter>Header Files\Sorting Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Data Structures\LinkedList.h">
+      <Filter>Header Files\Data Structures</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

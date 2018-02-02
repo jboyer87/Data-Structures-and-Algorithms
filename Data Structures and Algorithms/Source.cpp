@@ -1,5 +1,5 @@
-#include "InsertionSort.h"
-#include "BinarySearch.h"
+#include "Sorting Algorithms\InsertionSort.h"
+#include "Search Algorithms\BinarySearch.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -9,7 +9,6 @@ int main()
 	// Insertion Sort
 
 	// Test with int
-	InsertionSort<int> insertionSortInt;
 
 	std::vector<int> testVectorInt;
 
@@ -20,11 +19,9 @@ int main()
 	testVectorInt.push_back(0);
 	testVectorInt.push_back(19);
 
-	testVectorInt = insertionSortInt.sort(testVectorInt);
+	testVectorInt = insertionSort(testVectorInt);
 
 	// Test with double
-	InsertionSort<double> insertionSortDouble;
-
 	std::vector<double> testVectorDouble;
 
 	testVectorDouble.push_back(1.001);
@@ -34,13 +31,12 @@ int main()
 	testVectorDouble.push_back(0.0);
 	testVectorDouble.push_back(19.12);
 
-	testVectorDouble = insertionSortDouble.sort(testVectorDouble);
+	testVectorDouble = insertionSort(testVectorDouble);
 
 
 	// Binary Search
 
 	// Test with int
-	BinarySearch<int> binarySearchInt;
 
 	std::vector<int> testBinarySearchInt;
 
@@ -56,7 +52,7 @@ int main()
 	
 	int searchResultInt = 0;
 	
-	searchResultInt = binarySearchInt.binarySearch(needleInt, testBinarySearchInt);
+	searchResultInt = binarySearch(needleInt, testBinarySearchInt);
 
 	if (searchResultInt == -1)
 	{
@@ -69,8 +65,6 @@ int main()
 
 
 	// Test with string
-	BinarySearch<std::string> binarySearchString;
-
 	std::vector<std::string> testBinarySearchString;
 
 	// Have to add a leading 0 to make sure the ordering is as expected
@@ -86,7 +80,7 @@ int main()
 
 	int searchResultString = 0;
 
-	searchResultString = binarySearchString.binarySearch(needleString, testBinarySearchString);
+	searchResultString = binarySearch(needleString, testBinarySearchString);
 
 	if (searchResultString == -1)
 	{
