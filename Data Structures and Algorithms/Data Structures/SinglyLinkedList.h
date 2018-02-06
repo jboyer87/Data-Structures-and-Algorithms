@@ -1,6 +1,4 @@
 #pragma once
-#include <vector>
-#include <iterator>
 #include <exception>
 
 struct Node
@@ -157,5 +155,4 @@ void SinglyLinkedList::remove(int atIndex)
 			i++;
 		}
 	}
-
 }
