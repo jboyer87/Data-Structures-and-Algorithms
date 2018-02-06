@@ -1,5 +1,6 @@
 #include "Sorting Algorithms\InsertionSort.h"
 #include "Search Algorithms\BinarySearch.h"
+#include "Data Structures\SinglyLinkedList.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -49,9 +50,9 @@ int main()
 	testBinarySearchInt.push_back(13);
 
 	int needleInt = 9;
-	
+
 	int searchResultInt = 0;
-	
+
 	searchResultInt = binarySearch(needleInt, testBinarySearchInt);
 
 	if (searchResultInt == -1)
@@ -90,6 +91,36 @@ int main()
 	{
 		std::cout << "Found it at index " << searchResultString << " (" << testBinarySearchString[searchResultString] << ")" << std::endl;
 	}
+
+	SinglyLinkedList singlyLinkedList;
+
+	singlyLinkedList.push(1);
+
+	// See if an item is in the linked list
+	int searchResult = singlyLinkedList.find(1);
+
+	if (searchResult == -1)
+	{
+		std::cout << "Not found" << std::endl;
+	}
+	else
+	{
+		std::cout << "Found at position " << searchResult << std::endl;
+	}
+
+	try
+	{
+		// Remove a node
+		singlyLinkedList.remove(0);
+	}
+	catch (std::out_of_range exception)
+	{
+		std::cout << exception.what() << std::endl;
+	}
+
+	singlyLinkedList.push(1);
+	singlyLinkedList.push(2);
+	singlyLinkedList.push(3);
 
 	return 0;
 }

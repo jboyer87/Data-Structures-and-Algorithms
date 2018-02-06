@@ -35,7 +35,7 @@
     <ClInclude Include="Sorting Algorithms\InsertionSort.h">
       <Filter>Header Files\Sorting Algorithms</Filter>
     </ClInclude>
-    <ClInclude Include="Data Structures\LinkedList.h">
+    <ClInclude Include="Data Structures\SinglyLinkedList.h">
       <Filter>Header Files\Data Structures</Filter>
     </ClInclude>
   </ItemGroup>
