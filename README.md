@@ -6,6 +6,7 @@ This is a test bed to learn data structures and algorithms in C++.
 ## Data Structures
 
 - [Singly Linked List](Data%20Structures%20and%20Algorithms/Data%20Structures/SinglyLinkedList.h)
+- [Doubly Linked List](Data%20Structures%20and%20Algorithms/Data%20Structures/DoublyLinkedList.h)
 
 ## Sorting Algorithms
 
