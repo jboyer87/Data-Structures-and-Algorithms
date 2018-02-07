@@ -38,5 +38,11 @@
     <ClInclude Include="Data Structures\SinglyLinkedList.h">
       <Filter>Header Files\Data Structures</Filter>
     </ClInclude>
+    <ClInclude Include="Data Structures\DoublyLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
   </ItemGroup>
 </Project>

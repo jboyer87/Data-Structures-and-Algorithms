@@ -114,9 +114,13 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Data Structures\DoublyLinkedList.h" />
     <ClInclude Include="Data Structures\SinglyLinkedList.h" />
     <ClInclude Include="Search Algorithms\BinarySearch.h" />
     <ClInclude Include="Sorting Algorithms\InsertionSort.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

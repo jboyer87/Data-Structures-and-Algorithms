@@ -1,49 +1,50 @@
 #pragma once
 #include <stdexcept>
 
-struct Node
+struct DoubleNode
 {
 	int data;
-	Node *next;
+	DoubleNode *next;
+	DoubleNode *prev;
 };
 
 //template <typename T>
-class SinglyLinkedList
+class DoublyLinkedList
 {
 public:
-	SinglyLinkedList();
-	~SinglyLinkedList();
-	Node *getHead();
+	DoublyLinkedList();
+	~DoublyLinkedList();
+	DoubleNode *getHead();
 	void push(int toInsert);
 	int getSize();
 	int find(int toFind);
 	void remove(int atIndex);
 
 private:
-	Node *head;
-	Node *tail;
+	DoubleNode *head;
+	DoubleNode *tail;
 	int size;
 };
 
-SinglyLinkedList::SinglyLinkedList()
+DoublyLinkedList::DoublyLinkedList()
 {
 	size = 0;
 	head = nullptr;
 	tail = nullptr;
 }
 
-SinglyLinkedList::~SinglyLinkedList()
+DoublyLinkedList::~DoublyLinkedList()
 {
 }
 
-Node* SinglyLinkedList::getHead()
+DoubleNode* DoublyLinkedList::getHead()
 {
 	return head;
 }
 
-void SinglyLinkedList::push(int toInsert)
+void DoublyLinkedList::push(int toInsert)
 {
-	Node *temp = new Node;
+	DoubleNode *temp = new DoubleNode;
 
 	temp->data = toInsert;
 
@@ -59,22 +60,23 @@ void SinglyLinkedList::push(int toInsert)
 	{
 		// Insert at the end and update tail pointer
 		tail->next = temp;
+		temp->prev = tail;
 		tail = temp;
 	}
-	
+
 	// Increment the list size
 	size++;
 }
 
-int SinglyLinkedList::getSize()
+int DoublyLinkedList::getSize()
 {
 	return size;
 }
 
-int SinglyLinkedList::find(int toFind)
+int DoublyLinkedList::find(int toFind)
 {
-	Node* front = head;
-	Node* current = front;
+	DoubleNode* front = head;
+	DoubleNode* current = front;
 
 	// Iterate through the list
 	for (int i = 0; i < size; i++)
@@ -83,7 +85,7 @@ int SinglyLinkedList::find(int toFind)
 		if (current->data == toFind)
 		{
 			return i;
-		} 
+		}
 		else
 		{
 			current = current->next;
@@ -94,9 +96,9 @@ int SinglyLinkedList::find(int toFind)
 	return -1;
 }
 
-void SinglyLinkedList::remove(int atIndex)
+void DoublyLinkedList::remove(int atIndex)
 {
-	Node *current = head;
+	DoubleNode *current = head;
 
 	// If deleting a node that does not exist
 	if (atIndex > size - 1 || atIndex < 0)
@@ -108,9 +110,14 @@ void SinglyLinkedList::remove(int atIndex)
 	// If deleting head
 	if (atIndex == 0)
 	{
-		Node *temp = head;
+		DoubleNode *temp = head;
 
-		head = head->next;
+		if (size > 1)
+		{
+			head = head->next;
+
+			head->prev = nullptr;
+		}
 
 		delete temp;
 
@@ -133,7 +140,7 @@ void SinglyLinkedList::remove(int atIndex)
 			// If the next node is the node to delete
 			if (i == atIndex - 1)
 			{
-				Node *temp = current->next;
+				DoubleNode *temp = current->next;
 
 				// If we're deleting the tail
 				if (temp == tail)
@@ -143,6 +150,8 @@ void SinglyLinkedList::remove(int atIndex)
 				}
 
 				current->next = current->next->next;
+
+				current->next->prev = current;
 
 				delete temp;
 

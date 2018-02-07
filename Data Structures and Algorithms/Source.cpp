@@ -1,6 +1,7 @@
 #include "Sorting Algorithms\InsertionSort.h"
 #include "Search Algorithms\BinarySearch.h"
 #include "Data Structures\SinglyLinkedList.h"
+#include "Data Structures\DoublyLinkedList.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -97,15 +98,15 @@ int main()
 	singlyLinkedList.push(1);
 
 	// See if an item is in the linked list
-	int searchResult = singlyLinkedList.find(1);
+	int searchResultSingle = singlyLinkedList.find(1);
 
-	if (searchResult == -1)
+	if (searchResultSingle == -1)
 	{
 		std::cout << "Not found" << std::endl;
 	}
 	else
 	{
-		std::cout << "Found at position " << searchResult << std::endl;
+		std::cout << "Found at position " << searchResultSingle << std::endl;
 	}
 
 	try
@@ -121,6 +122,39 @@ int main()
 	singlyLinkedList.push(1);
 	singlyLinkedList.push(2);
 	singlyLinkedList.push(3);
+
+
+	DoublyLinkedList doublyLinkedList;
+
+	doublyLinkedList.push(1);
+	doublyLinkedList.push(2);
+	doublyLinkedList.push(3);
+
+	// See if an item is in the linked list
+	int searchResultDouble = doublyLinkedList.find(1);
+
+	if (searchResultDouble == -1)
+	{
+		std::cout << "Not found" << std::endl;
+	}
+	else
+	{
+		std::cout << "Found at position " << searchResultDouble << std::endl;
+	}
+
+	try
+	{
+		// Remove a node
+		doublyLinkedList.remove(0);
+	}
+	catch (std::out_of_range exception)
+	{
+		std::cout << exception.what() << std::endl;
+	}
+
+	doublyLinkedList.push(1);
+	doublyLinkedList.push(2);
+	doublyLinkedList.push(3);
 
 	return 0;
 }
