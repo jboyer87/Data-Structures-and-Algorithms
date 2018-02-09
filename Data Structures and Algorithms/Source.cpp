@@ -3,6 +3,7 @@
 #include "Data Structures\SinglyLinkedList.h"
 #include "Data Structures\DoublyLinkedList.h"
 #include "Data Structures\Stack.h"
+#include "Data Structures\Queue.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -10,6 +11,8 @@
 int main()
 {
 	// Insertion Sort
+
+	std::cout << "** Insertion Sort **" << std::endl;
 
 	// Test with int
 	std::vector<int> testVectorInt;
@@ -36,6 +39,8 @@ int main()
 	testVectorDouble = insertionSort(testVectorDouble);
 
 	// Binary Search
+
+	std::cout << "** Binary Search **" << std::endl;
 
 	// Test with int
 	std::vector<int> testBinarySearchInt;
@@ -91,6 +96,9 @@ int main()
 	}
 
 	// Test singly linked list
+
+	std::cout << "** Singly Linked List **" << std::endl;
+
 	SinglyLinkedList::SinglyLinkedList singlyLinkedList;
 
 	singlyLinkedList.push(1);
@@ -122,6 +130,9 @@ int main()
 	singlyLinkedList.push(3);
 
 	// Test doubly linked list
+
+	std::cout << "** Doubly Linked List **" << std::endl;
+
 	DoublyLinkedList::DoublyLinkedList doublyLinkedList;
 
 	doublyLinkedList.push(1);
@@ -155,6 +166,9 @@ int main()
 	doublyLinkedList.push(3);
 
 	// Test the stack
+
+	std::cout << "** Stack **" << std::endl;
+
 	Stack::Stack stack;
 
 	stack.push(5);
@@ -178,6 +192,25 @@ int main()
 	stack.push(8);
 	std::cout << stack.pop() << std::endl;
 	std::cout << stack.top() << std::endl;
+
+	// Test the queue
+
+	std::cout << "** Queue **" << std::endl;
+
+	Queue::Queue queue;
+
+	queue.enqueue(5);
+	queue.enqueue(3);
+	std::cout << queue.front() << std::endl;
+	std::cout << queue.size() << std::endl;
+	queue.dequeue();
+	queue.enqueue(7);
+	queue.dequeue();
+	std::cout << queue.front() << std::endl;
+	queue.dequeue();
+	// Would error, queue is empty
+	// queue.dequeue();
+	std::cout << queue.empty() << std::endl;
 
 	return 0;
 }
