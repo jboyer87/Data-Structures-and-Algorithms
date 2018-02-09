@@ -116,6 +116,7 @@
   <ItemGroup>
     <ClInclude Include="Data Structures\DoublyLinkedList.h" />
     <ClInclude Include="Data Structures\SinglyLinkedList.h" />
+    <ClInclude Include="Data Structures\Stack.h" />
     <ClInclude Include="Search Algorithms\BinarySearch.h" />
     <ClInclude Include="Sorting Algorithms\InsertionSort.h" />
   </ItemGroup>

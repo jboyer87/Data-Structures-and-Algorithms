@@ -2,6 +2,7 @@
 #include "Search Algorithms\BinarySearch.h"
 #include "Data Structures\SinglyLinkedList.h"
 #include "Data Structures\DoublyLinkedList.h"
+#include "Data Structures\Stack.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -11,7 +12,6 @@ int main()
 	// Insertion Sort
 
 	// Test with int
-
 	std::vector<int> testVectorInt;
 
 	testVectorInt.push_back(1);
@@ -35,11 +35,9 @@ int main()
 
 	testVectorDouble = insertionSort(testVectorDouble);
 
-
 	// Binary Search
 
 	// Test with int
-
 	std::vector<int> testBinarySearchInt;
 
 	testBinarySearchInt.push_back(1);
@@ -64,7 +62,6 @@ int main()
 	{
 		std::cout << "Found it at index " << searchResultInt << " (" << testBinarySearchInt[searchResultInt] << ")" << std::endl;
 	}
-
 
 	// Test with string
 	std::vector<std::string> testBinarySearchString;
@@ -93,7 +90,8 @@ int main()
 		std::cout << "Found it at index " << searchResultString << " (" << testBinarySearchString[searchResultString] << ")" << std::endl;
 	}
 
-	SinglyLinkedList singlyLinkedList;
+	// Test singly linked list
+	SinglyLinkedList::SinglyLinkedList singlyLinkedList;
 
 	singlyLinkedList.push(1);
 
@@ -123,8 +121,8 @@ int main()
 	singlyLinkedList.push(2);
 	singlyLinkedList.push(3);
 
-
-	DoublyLinkedList doublyLinkedList;
+	// Test doubly linked list
+	DoublyLinkedList::DoublyLinkedList doublyLinkedList;
 
 	doublyLinkedList.push(1);
 	doublyLinkedList.push(2);
@@ -155,6 +153,31 @@ int main()
 	doublyLinkedList.push(1);
 	doublyLinkedList.push(2);
 	doublyLinkedList.push(3);
+
+	// Test the stack
+	Stack::Stack stack;
+
+	stack.push(5);
+	stack.push(3);
+	std::cout << stack.pop() << std::endl;
+	stack.push(7);
+	std::cout << stack.pop() << std::endl;
+	std::cout << stack.top() << std::endl;
+	std::cout << stack.pop() << std::endl;
+	// Would error, stack is empty
+	// std::cout << stack.pop() << std::endl;
+	// Would error, stack is empty
+	// std::cout << stack.top() << std::endl;
+	std::cout << stack.empty() << std::endl;
+	stack.push(9);
+	stack.push(7);
+	stack.push(3);
+	stack.push(5);
+	std::cout << stack.size() << std::endl;
+	std::cout << stack.pop() << std::endl;
+	stack.push(8);
+	std::cout << stack.pop() << std::endl;
+	std::cout << stack.top() << std::endl;
 
 	return 0;
 }
