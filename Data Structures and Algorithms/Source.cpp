@@ -4,6 +4,7 @@
 #include "Data Structures\DoublyLinkedList.h"
 #include "Data Structures\Stack.h"
 #include "Data Structures\Queue.h"
+#include "Data Structures\Deque.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -211,6 +212,24 @@ int main()
 	// Would error, queue is empty
 	// queue.dequeue();
 	std::cout << queue.empty() << std::endl;
+
+	// Test the deque
+
+	std::cout << "** Deque **" << std::endl;
+
+	Deque::Deque deque;
+
+	deque.insertFront(3);
+	deque.insertFront(5);
+	std::cout << deque.front() << std::endl;
+	std::cout << deque.size() << std::endl;
+	deque.eraseFront();
+	deque.insertBack(7);
+	std::cout << deque.back() << std::endl;
+	deque.eraseFront();
+	deque.eraseBack();
+	std::cout << deque.empty() << std::endl; 
+	std::cout << deque.size() << std::endl;
 
 	return 0;
 }
