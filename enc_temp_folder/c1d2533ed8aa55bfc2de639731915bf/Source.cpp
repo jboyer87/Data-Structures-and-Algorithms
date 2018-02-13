@@ -234,41 +234,31 @@ int main()
 
 	// Test the binary tree structure
 
-	std::cout << "** Binary Tree **" << std::endl;
-
 	BinaryTree::BinaryTree binaryTree;
 
-	binaryTree.setRoot(BinaryTree::newNode(1));
+	binaryTree.setRoot(BinaryTree::newNode(0));
 	
-	// 1
+	// 0
 
-	binaryTree.root()->left = BinaryTree::newNode(2);
+	binaryTree.root()->left = BinaryTree::newNode(10);
 	
-	//   1
+	//   0
 	//  / \
-	// 2
+	// 10
 
-	binaryTree.root()->right = BinaryTree::newNode(3);
+	binaryTree.root()->right = BinaryTree::newNode(20);
 
-	//   1
+	//   0
 	//  / \
-	// 2   3
+	// 10 20
 
-	binaryTree.root()->left->left = BinaryTree::newNode(4);
+	binaryTree.root()->left->left = BinaryTree::newNode(5);
 
-	//     1
+	//     0
 	//    / \
-	//   2   3
+	//   10 20
 	//  / \
-	// 4
-
-	binaryTree.root()->left->right = BinaryTree::newNode(5);
-
-	//     1
-	//    / \
-	//   2   3
-	//  / \
-	// 4   5
+	// 5
 
 	return 0;
 }
