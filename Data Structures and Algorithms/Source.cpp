@@ -6,6 +6,7 @@
 #include "Data Structures\Queue.h"
 #include "Data Structures\Deque.h"
 #include "Data Structures\BinaryTree.h"
+#include "Data Structures\PriorityQueue.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -269,6 +270,23 @@ int main()
 	//   2   3
 	//  / \
 	// 4   5
+
+	// Test the priority queue structure
+
+	std::cout << "** Priority Queue **" << std::endl;
+
+	PriorityQueue::PriorityQueue priorityQueue;
+
+	priorityQueue.insert(3);
+	priorityQueue.insert(2);
+	priorityQueue.insert(0);
+	priorityQueue.insert(1);
+	priorityQueue.insert(5);
+	priorityQueue.insert(4);
+
+	std::cout << priorityQueue.min() << std::endl;
+
+	priorityQueue.removeMin();
 
 	return 0;
 }

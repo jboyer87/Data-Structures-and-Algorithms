@@ -117,6 +117,7 @@
     <ClInclude Include="Data Structures\BinaryTree.h" />
     <ClInclude Include="Data Structures\Deque.h" />
     <ClInclude Include="Data Structures\DoublyLinkedList.h" />
+    <ClInclude Include="Data Structures\PriorityQueue.h" />
     <ClInclude Include="Data Structures\Queue.h" />
     <ClInclude Include="Data Structures\SinglyLinkedList.h" />
     <ClInclude Include="Data Structures\Stack.h" />

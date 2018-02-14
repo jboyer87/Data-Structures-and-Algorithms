@@ -2,6 +2,12 @@
 #include <vector>
 #include <iterator>
 
+// Binary search works by taking a sorted data structure (vector in this case), and 
+// constantly dividing the structure in half by comparing the searched-for element to
+// the center element in the list. By dividing in half, binary search will be able to
+// tell whether the element can be found in the left or right side of the list, which
+// avoids having to compare each element. This provides O(logn) search time.
+
 template <typename T>
 int binarySearch(T needle, std::vector<T> haystack)
 {

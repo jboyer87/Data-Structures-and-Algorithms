@@ -2,6 +2,9 @@
 #include <list>
 #include <stdexcept>
 
+// A stack is a structure that provides first-in last-out access to elements, allowing
+// O(1) insertion and O(1) retrieval.
+
 namespace Stack {
 	class Stack {
 	public:

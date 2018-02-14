@@ -1,6 +1,9 @@
 #pragma once
 #include <stdexcept>
 
+// A doubly linked list is a structure where nodes have pointers to the previous and
+// next nodes in the list, allowing list traversal in both directions.
+
 namespace DoublyLinkedList {
 	struct Node
 	{
@@ -36,6 +39,7 @@ namespace DoublyLinkedList {
 
 	DoublyLinkedList::~DoublyLinkedList()
 	{
+
 	}
 
 	Node* DoublyLinkedList::getHead()

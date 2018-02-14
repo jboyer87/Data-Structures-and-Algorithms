@@ -1,5 +1,8 @@
 #pragma once
 
+// A binary tree is a tree structure such that each node has two child nodes, a left
+// node, and a right node.
+
 namespace BinaryTree {
 	struct Node {
 		Node();

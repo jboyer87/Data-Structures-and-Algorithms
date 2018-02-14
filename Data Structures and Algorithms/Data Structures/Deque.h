@@ -1,6 +1,9 @@
 #pragma once
 #include <list>
 
+// A deque or double-ended queue is a structure that allows insert/delete operations
+// at either end.
+
 namespace Deque {
 	class Deque {
 	public:

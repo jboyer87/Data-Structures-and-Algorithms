@@ -1,6 +1,9 @@
 #pragma once
 #include <stdexcept>
 
+// A singly linked list is a structure where nodes have pointers to the next node in
+// the list, allowing forward node traversal.
+
 namespace SinglyLinkedList {
 
 	struct Node

@@ -1,6 +1,9 @@
 #pragma once
 #include <list>
 
+// A queue is a structure that provides first-in first-out access to elements in the 
+// order they were added, allowing O(1) retrieval and O(1) insertion.
+
 namespace Queue {
 	class Queue {
 	public:
