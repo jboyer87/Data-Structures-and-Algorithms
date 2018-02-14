@@ -1,5 +1,5 @@
 #pragma once
-#include <list>
+#include <forward_list>
 #include <stdexcept>
 
 // A stack is a structure that provides first-in last-out access to elements, allowing
@@ -10,20 +10,20 @@ namespace Stack {
 	public:
 		Stack();
 		~Stack();
-		void push(int element);
+		void push(const int element);
 		int pop();
 		int top();
 		int size();
 		bool empty();
 	private:
 		int stackSize;
-		std::list<int> data;
+		std::forward_list<int> data;
 	};
 
 	Stack::Stack()
 	{
 		stackSize = 0;
-		std::list<int> data;
+		std::forward_list<int> data;
 	}
 
 	Stack::~Stack()
@@ -31,7 +31,9 @@ namespace Stack {
 
 	}
 
-	void Stack::push(int element)
+	// Add element to the top of the stack 
+	// O(1)
+	void Stack::push(const int element)
 	{
 		// Insert the element at the front of the list
 		data.push_front(element);
@@ -40,6 +42,8 @@ namespace Stack {
 		stackSize++;
 	}
 
+	// Remove and return the element at the top of the stack
+	// O(1)
 	int Stack::pop()
 	{
 		// Grab the top element and store temporarily
@@ -55,6 +59,8 @@ namespace Stack {
 		return temp;
 	}
 
+	// Peek at the element at the top of the stack
+	// O(1)
 	int Stack::top()
 	{
 		if (stackSize == 0)
@@ -66,11 +72,15 @@ namespace Stack {
 		return data.front();
 	}
 
+	// Return the stored interal size variable
+	// O(1)
 	int Stack::size()
 	{
 		return stackSize;
 	}
 
+	// Return true if empty, false if not empty
+	// O(1)
 	bool Stack::empty()
 	{
 		// If the size is 0, it's empty
