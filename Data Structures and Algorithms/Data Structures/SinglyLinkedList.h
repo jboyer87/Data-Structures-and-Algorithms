@@ -19,10 +19,10 @@ namespace SinglyLinkedList {
 		SinglyLinkedList();
 		~SinglyLinkedList();
 		Node *getHead();
-		void push(int toInsert);
+		void push(const int toInsert);
 		int getSize();
-		int find(int toFind);
-		void remove(int atIndex);
+		int find(const int toFind);
+		void remove(const int atIndex);
 
 	private:
 		Node *head;
@@ -46,7 +46,7 @@ namespace SinglyLinkedList {
 		return head;
 	}
 
-	void SinglyLinkedList::push(int toInsert)
+	void SinglyLinkedList::push(const int toInsert)
 	{
 		Node *temp = new Node;
 
@@ -76,7 +76,7 @@ namespace SinglyLinkedList {
 		return size;
 	}
 
-	int SinglyLinkedList::find(int toFind)
+	int SinglyLinkedList::find(const int toFind)
 	{
 		Node* front = head;
 		Node* current = front;
@@ -99,7 +99,7 @@ namespace SinglyLinkedList {
 		return -1;
 	}
 
-	void SinglyLinkedList::remove(int atIndex)
+	void SinglyLinkedList::remove(const int atIndex)
 	{
 		Node *current = head;
 

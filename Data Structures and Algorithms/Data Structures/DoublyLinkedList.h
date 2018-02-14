@@ -19,10 +19,10 @@ namespace DoublyLinkedList {
 		DoublyLinkedList();
 		~DoublyLinkedList();
 		Node *getHead();
-		void push(int toInsert);
+		void push(const int toInsert);
 		int getSize();
-		int find(int toFind);
-		void remove(int atIndex);
+		int find(const int toFind);
+		void remove(const int atIndex);
 
 	private:
 		Node *head;
@@ -47,7 +47,7 @@ namespace DoublyLinkedList {
 		return head;
 	}
 
-	void DoublyLinkedList::push(int toInsert)
+	void DoublyLinkedList::push(const int toInsert)
 	{
 		Node *temp = new Node;
 
@@ -78,7 +78,7 @@ namespace DoublyLinkedList {
 		return size;
 	}
 
-	int DoublyLinkedList::find(int toFind)
+	int DoublyLinkedList::find(const int toFind)
 	{
 		Node* front = head;
 		Node* current = front;
@@ -101,7 +101,7 @@ namespace DoublyLinkedList {
 		return -1;
 	}
 
-	void DoublyLinkedList::remove(int atIndex)
+	void DoublyLinkedList::remove(const int atIndex)
 	{
 		Node *current = head;
 

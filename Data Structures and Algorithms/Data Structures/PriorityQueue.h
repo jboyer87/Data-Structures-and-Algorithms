@@ -10,7 +10,7 @@ namespace PriorityQueue {
 	public:
 		PriorityQueue();
 		~PriorityQueue();
-		void insert(int element);
+		void insert(const int element);
 		int min();
 		void removeMin();
 	private:
@@ -27,7 +27,7 @@ namespace PriorityQueue {
 
 	}
 
-	void PriorityQueue::insert(int element)
+	void PriorityQueue::insert(const int element)
 	{
 		std::list<int>::iterator iterator = data.begin();
 

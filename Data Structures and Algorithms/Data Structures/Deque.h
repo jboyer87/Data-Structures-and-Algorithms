@@ -9,8 +9,8 @@ namespace Deque {
 	public:
 		Deque();
 		~Deque();
-		void insertFront(int element);
-		void insertBack(int element);
+		void insertFront(const int element);
+		void insertBack(const int element);
 		void eraseFront();
 		void eraseBack();
 		int front();
@@ -34,13 +34,13 @@ namespace Deque {
 
 	}
 
-	void Deque::insertFront(int element)
+	void Deque::insertFront(const int element)
 	{
 		data.push_front(element);
 		dequeSize++;
 	}
 
-	void Deque::insertBack(int element)
+	void Deque::insertBack(const int element)
 	{
 		data.push_back(element);
 		dequeSize++;

@@ -15,7 +15,7 @@ namespace BinaryTree {
 		Node* right;
 	};
 
-	struct Node *newNode(int data)
+	struct Node *newNode(const int data)
 	{
 		struct Node *temp = (struct Node *)malloc(sizeof(struct Node));
 		temp->data = data;
@@ -58,9 +58,9 @@ namespace BinaryTree {
 		int size();
 		bool empty();
 		Node* root();
-		Node* insert(Node* root, int toInsert);
-		void remove(int key);
-		Node* find(int data);
+		Node* insert(const Node* root, const int toInsert);
+		void remove(const int key);
+		Node* find(const int data);
 		void setRoot(Node* newRoot);
 	private:
 		Node* rootNode;
@@ -101,18 +101,18 @@ namespace BinaryTree {
 		return rootNode;
 	}
 
-	Node* BinaryTree::insert(Node* root, int toInsert)
+	Node* BinaryTree::insert(const Node* root, const int toInsert)
 	{
 		// TODO
 		return NULL;
 	}
 
-	void BinaryTree::remove(int key)
+	void BinaryTree::remove(const int key)
 	{
 		// TODO
 	}
 
-	Node* BinaryTree::find(int data)
+	Node* BinaryTree::find(const int data)
 	{
 		// TODO
 		return NULL;

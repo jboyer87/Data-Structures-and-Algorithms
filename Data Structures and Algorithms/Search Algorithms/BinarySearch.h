@@ -9,7 +9,7 @@
 // avoids having to compare each element. This provides O(logn) search time.
 
 template <typename T>
-int binarySearch(T needle, std::vector<T> haystack)
+int binarySearch(const T needle, const std::vector<T> haystack)
 {
 	int start = 0;
 	int end = haystack.size() - 1;

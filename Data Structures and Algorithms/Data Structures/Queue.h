@@ -9,7 +9,7 @@ namespace Queue {
 	public:
 		Queue();
 		~Queue();
-		void enqueue(int element);
+		void enqueue(const int element);
 		void dequeue();
 		int front();
 		int size();
@@ -31,7 +31,7 @@ namespace Queue {
 
 	}
 
-	void Queue::enqueue(int element)
+	void Queue::enqueue(const int element)
 	{
 		data.push_back(element);
 
