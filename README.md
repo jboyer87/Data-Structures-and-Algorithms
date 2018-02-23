@@ -5,6 +5,7 @@ This is a test bed to learn data structures and algorithms in C++.
 
 ## Data Structures
 
+- [Binary Tree](Data%20Structures%20and%20Algorithms/Data%20Structures/BinaryTree.h)
 - [Deque](Data%20Structures%20and%20Algorithms/Data%20Structures/Deque.h)
 - [Doubly Linked List](Data%20Structures%20and%20Algorithms/Data%20Structures/DoublyLinkedList.h)
 - [Priority Queue](Data%20Structures%20and%20Algorithms/Data%20Structures/PriorityQueue.h)
