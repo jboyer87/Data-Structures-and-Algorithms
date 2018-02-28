@@ -20,3 +20,8 @@ This is a test bed to learn data structures and algorithms in C++.
 ## Search Algorithms
 
 - [Binary Search](Data%20Structures%20and%20Algorithms/Search%20Algorithms/BinarySearch.h)
+
+## Utilities
+
+### String
+- [String Utilities](Data%20Structures%20and%20Algorithms/Utilities/String.h)
