@@ -7,12 +7,15 @@
 #include "Data Structures\Deque.h"
 #include "Data Structures\BinaryTree.h"
 #include "Data Structures\PriorityQueue.h"
+#include "Utilities\String.h"
 #include <iostream>
 #include <vector>
 #include <string>
 
 int main()
 {
+	#pragma region InsertionSort
+
 	// Insertion Sort
 
 	std::cout << "** Insertion Sort **" << std::endl;
@@ -40,6 +43,10 @@ int main()
 	testVectorDouble.push_back(19.12);
 
 	testVectorDouble = insertionSort(testVectorDouble);
+
+	#pragma endregion
+
+	#pragma region BinarySearch
 
 	// Binary Search
 
@@ -98,6 +105,10 @@ int main()
 		std::cout << "Found it at index " << searchResultString << " (" << testBinarySearchString[searchResultString] << ")" << std::endl;
 	}
 
+	#pragma endregion
+
+	#pragma region SinglyLinkedList
+
 	// Test singly linked list
 
 	std::cout << "** Singly Linked List **" << std::endl;
@@ -131,6 +142,10 @@ int main()
 	singlyLinkedList.push(1);
 	singlyLinkedList.push(2);
 	singlyLinkedList.push(3);
+
+	#pragma endregion
+
+	#pragma region DoublyLinkedList
 
 	// Test doubly linked list
 
@@ -168,6 +183,10 @@ int main()
 	doublyLinkedList.push(2);
 	doublyLinkedList.push(3);
 
+	#pragma endregion
+
+	#pragma region Stack
+
 	// Test the stack
 
 	std::cout << "** Stack **" << std::endl;
@@ -196,6 +215,10 @@ int main()
 	std::cout << stack.pop() << std::endl;
 	std::cout << stack.top() << std::endl;
 
+	#pragma endregion
+
+	#pragma region Queue
+
 	// Test the queue
 
 	std::cout << "** Queue **" << std::endl;
@@ -215,6 +238,10 @@ int main()
 	// queue.dequeue();
 	std::cout << queue.empty() << std::endl;
 
+	#pragma endregion
+
+	#pragma region Deque
+
 	// Test the deque
 
 	std::cout << "** Deque **" << std::endl;
@@ -232,6 +259,10 @@ int main()
 	deque.eraseBack();
 	std::cout << deque.empty() << std::endl; 
 	std::cout << deque.size() << std::endl;
+
+	#pragma endregion
+
+	#pragma region BinaryTree
 
 	// Test the binary tree structure
 
@@ -271,6 +302,10 @@ int main()
 	//  / \
 	// 4   5
 
+	#pragma endregion
+
+	#pragma region PriorityQueue
+
 	// Test the priority queue structure
 
 	std::cout << "** Priority Queue **" << std::endl;
@@ -287,6 +322,29 @@ int main()
 	std::cout << priorityQueue.min() << std::endl;
 
 	priorityQueue.removeMin();
+
+	#pragma endregion
+
+	#pragma region StringUtilities
+
+	// Test various string utilities
+
+	std::cout << "** String Utilities **" << std::endl;
+
+	// Test reversal on even/odd number of characters
+	std::string testString1 = "12345678";
+	std::string testString2 = "123456789";
+
+	std::cout << testString1 << std::endl;
+	std::cout << testString2 << std::endl;
+
+	testString1 = Utilities::String::reverse(testString1);
+	testString2 = Utilities::String::reverse(testString2);
+
+	std::cout << testString1 << std::endl;
+	std::cout << testString2 << std::endl;
+
+	#pragma endregion
 
 	return 0;
 }
