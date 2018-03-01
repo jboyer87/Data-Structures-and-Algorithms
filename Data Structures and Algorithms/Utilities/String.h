@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 namespace Utilities {
 	namespace String {
@@ -35,6 +36,24 @@ namespace Utilities {
 			}
 
 			return input;
+		}
+
+		// Checks a string to see if it contains a character. Returns a vector object 
+		// with the locations of each instance of the character, or a null vector object
+		// if no instances were found. Runs in O(n) time.
+		std::vector<int> contains(std::string haystack, char needle)
+		{
+			std::vector<int> indices;
+
+			for (int i = 0; i < haystack.length(); i++)
+			{
+				if (haystack[i] == needle)
+				{
+					indices.push_back(i);
+				}
+			}
+
+			return indices;
 		}
 	}
 }

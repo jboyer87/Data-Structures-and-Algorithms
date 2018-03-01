@@ -334,6 +334,7 @@ int main()
 	// Test reversal on even/odd number of characters
 	std::string testString1 = "12345678";
 	std::string testString2 = "123456789";
+	std::string testString3 = "11110000";
 
 	std::cout << testString1 << std::endl;
 	std::cout << testString2 << std::endl;
@@ -343,6 +344,18 @@ int main()
 
 	std::cout << testString1 << std::endl;
 	std::cout << testString2 << std::endl;
+
+	// Reverse them again so we can use them below
+	testString1 = Utilities::String::reverse(testString1);
+	testString2 = Utilities::String::reverse(testString2);
+
+	// Test contains on a few different strings
+	std::vector<int> testIndices1 = Utilities::String::contains(testString1, '1'); // 0
+	std::vector<int> testIndices2 = Utilities::String::contains(testString1, '2'); // 1
+	std::vector<int> testIndices3 = Utilities::String::contains(testString1, '8'); // 7
+	std::vector<int> testIndices4 = Utilities::String::contains(testString1, '9'); // null (not found)
+
+	std::vector<int> testIndices5 = Utilities::String::contains(testString3, '1'); // 0, 1, 2, 3
 
 	#pragma endregion
 
